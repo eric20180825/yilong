@@ -1,0 +1,33 @@
+server:
+  port: 9000
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/bank?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+#    type: com.zaxxer.hikari.util.DriverDataSource
+#    hikari:
+#      minimum-idle: 20
+#      maximum-pool-size: 100
+#      auto-commit: true
+#      idle-timeout: 5000
+#      pool-name: DatebookHikariCP
+#      max-lifetime: 1800000
+#      connection-timeout: 30000
+#      connection-test-query: select 1
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+project:
+  bank:
+    url:
+      zhaoshang: https://cbsz.ebank.cmbchina.com/CmbBank_DebitCard_AccountManager/UI/DebitCard/AccountQuery/Pro8/am_QueryTrans.aspx
+    params:
+      zhaoshang: RequestType=AjaxRequest&ClientNo=CLIENTNO&AccountUID=ACCOUNTUID&SubAccountNo=SUBACCOUNTNO&TransTypeID=-&TransType=%5B+%E5%85%A8%E9%83%A8+%5D&BeginDate=20190124&EndDate=20190130&IncomeFrom=&IncomeTo=&PayFrom=&PayTo=&Memo=&SortName=DateTime&SortDirection=desc
+
+
+
