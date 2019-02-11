@@ -1,0 +1,4 @@
+project:
+  log:
+    bad:
+      value: 5000

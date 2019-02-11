@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-       <groupId>com.yilong</groupId>
+        <groupId>com.yilong</groupId>
         <artifactId>project-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
@@ -13,5 +13,11 @@
     <packaging>jar</packaging>
     <name>bbs-core</name>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.yilong</groupId>
+            <artifactId>common-utils</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>

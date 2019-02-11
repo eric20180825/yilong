@@ -2,24 +2,21 @@ server:
   port: 8080
 
 spring:
+  profiles:
+    active: config
+  banner:
+    location: application.yml
   datasource:
-    url: jdbc:mysql://localhost:3306/bbs?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://localhost:3306/bbs?useUnicode=true&characterEncoding=utf8&serverTimezone=CTT
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
-#    type: com.zaxxer.hikari.util.DriverDataSource
-#    hikari:
-#      minimum-idle: 20
-#      maximum-pool-size: 100
-#      auto-commit: true
-#      idle-timeout: 5000
-#      pool-name: DatebookHikariCP
-#      max-lifetime: 1800000
-#      connection-timeout: 30000
-#      connection-test-query: select 1
+    hikari:
+      maximum-pool-size: 100
   jpa:
     show-sql: true
     hibernate:
       ddl-auto: update
-
-
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8

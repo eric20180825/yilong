@@ -21,13 +21,12 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
 
 project:
   bank:
     url:
       zhaoshang: https://cbsz.ebank.cmbchina.com/CmbBank_DebitCard_AccountManager/UI/DebitCard/AccountQuery/Pro8/am_QueryTrans.aspx
     params:
-      zhaoshang: RequestType=AjaxRequest&ClientNo=CLIENTNO&AccountUID=ACCOUNTUID&SubAccountNo=SUBACCOUNTNO&TransTypeID=-&TransType=%5B+%E5%85%A8%E9%83%A8+%5D&BeginDate=20190124&EndDate=20190130&IncomeFrom=&IncomeTo=&PayFrom=&PayTo=&Memo=&SortName=DateTime&SortDirection=desc
-
-
+      zhaoshang: RequestType=AjaxRequest&ClientNo=CLIENTNO&AccountUID=ACCOUNTUID&SubAccountNo=SUBACCOUNTNO&TransTypeID=-&TransType=%5B+%E5%85%A8%E9%83%A8+%5D&BeginDate=BEGINDATE&EndDate=ENDDATE&IncomeFrom=&IncomeTo=&PayFrom=&PayTo=&Memo=&PageIndex=PAGEINDEX&PageSize=PAGESIZE&SortName=DateTime&SortDirection=asc
 
